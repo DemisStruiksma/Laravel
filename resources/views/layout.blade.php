@@ -36,8 +36,8 @@ Released   : 20140225
 			</ul>
 		</div>
     </div>
-    <li class>"{{ Request::path() === '/' ? 'current_page_item' : '' }}"</li>
-        @yield ('header')
+
+    @yield ('header')
     </div>
 
     @yield ('content')
