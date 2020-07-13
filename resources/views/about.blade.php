@@ -17,7 +17,7 @@
 			<ul class="style1">
 				@foreach ($article as $articles)
 				<li class="first">
-					<h3>{{ $articles->title }}</h3>
+					<a href="/articles/{{ $articles->id }}"><h3>{{ $articles->title }}</h3></a>
 					<p><a href="#">{{ $articles->excerpt }}</a></p>
 				</li>
 				@endforeach
