@@ -14,4 +14,11 @@ class ArticlesController extends Controller
 
         return view('articles.show', ['article' => $article]);
     }
+
+    public function showAll()
+    {
+        return view('articles', [
+            'article' => Article::latest()->get()
+        ]);
+    }
 }
