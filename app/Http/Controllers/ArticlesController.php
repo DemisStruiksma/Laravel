@@ -15,10 +15,27 @@ class ArticlesController extends Controller
         return view('articles.show', ['article' => $article]);
     }
 
-    public function showAll()
+    public function index()
     {
-        return view('articles', [
+        return view('articles.index', [
             'article' => Article::latest()->get()
         ]);
+    }
+
+    public function create() {
+        return view('articles.create');
+    }
+
+    public function store() {
+
+        $article = new Article();
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        $article->save();
+
+        return redirect('/articles');
     }
 }
