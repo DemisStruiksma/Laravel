@@ -14,6 +14,10 @@
 
                     <div class="control">
                         <input class="input" type="text" name="title" id="title">
+                        
+                        @if ($error->has('title'))
+                            <p>{{ $errors->first('title') }}</p>
+                        @endif
                     </div>
                 </div>
 
