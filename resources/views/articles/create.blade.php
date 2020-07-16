@@ -15,9 +15,7 @@
                     <div class="control">
                         <input class="input" type="text" name="title" id="title">
                         
-                        @if ($error->has('title'))
                             <p>{{ $errors->first('title') }}</p>
-                        @endif
                     </div>
                 </div>
 
@@ -26,6 +24,8 @@
 
                     <div class="control">
                         <textarea class="textarea" name="excerpt" id="excerpt"></textarea>
+
+                        <p>{{ $errors->first('excerpt') }}</p>
                     </div>
                 </div>
 
@@ -34,6 +34,8 @@
 
                     <div class="control">
                         <textarea class="textarea" name="body" id="body"></textarea>
+
+                        <p>{{ $errors->first('body') }}</p>
                     </div>
                 </div>
 
