@@ -13,11 +13,16 @@
                     <label class="label" for="title">Title</label>
 
                     <div class="control">
-                        <input class="input" type="text" name="title" id="title">
+                        <input 
+                        class="input" 
+                        type="text" 
+                        name="title" 
+                        id="title"
+                        value="{{ old('title') }}">
                         
-                        @if ($errors->has('title'))
+                        @error('title')
                             <p>{{ $errors->first('title') }}</p>
-                        @endif
+                        @enderror
                     </div>
                 </div>
 
@@ -25,11 +30,15 @@
                     <label class="label" for="excerpt">Excerpt</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="excerpt" id="excerpt"></textarea>
+                        <textarea 
+                        class="textarea" 
+                        name="excerpt" 
+                        id="excerpt"
+                        >{{ old('excerpt') }}"</textarea>
                     
-                    @if ($errors->has('excerpt'))
+                    @error('excerpt')
                         <p>{{ $errors->first('excerpt') }}</p>
-                    @endif
+                    @enderror
                     </div>
                 </div>
 
@@ -37,11 +46,15 @@
                     <label class="label" for="body">Body</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="body" id="body"></textarea>
+                        <textarea 
+                        class="textarea" 
+                        name="body" 
+                        id="body"
+                        >{{ old('body') }}</textarea>
 
-                    @if ($errors->has('body'))
+                    @error('body')
                         <p>{{ $errors->first('body') }}</p>
-                    @endif
+                    @enderror
                     </div>
                 </div>
 
